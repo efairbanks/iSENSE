@@ -65,18 +65,29 @@
 							<input style="margin:5px;" id="add_tag_earth" name="add_tag_earth" value="yes" type="checkbox" class="checkbox" /> Earth Science
 						</div><br />
                         
-                        
-    					<span style="float:none" class="hint">Select the subject area or areas that best describe your experiment.</span><br /><br />
+                        <span style="float:none" class="hint">Select the subject area or areas that best describe your experiment.</span>
+    					
+    					<br /><br />
                     
-                        <legend>Step 2: Session Options</legend><br />
-                 
-                        <div class="options">
+                        <span class="createHeader">Advanced Options:</span>
+                        <button type="button" id="showAdvancedOptions" onclick="$('#advancedoptions').toggle();$('#showAdvancedOptions').toggle();$('#hideAdvancedOptions').toggle();">
+                            Show
+                        </button>
+                        <button style="display:none;" type="button" id="hideAdvancedOptions" onclick="$('#advancedoptions').toggle();$('#showAdvancedOptions').toggle();$('#hideAdvancedOptions').toggle();">
+                            Hide
+                        </button>
                         
+                        <br />
+                 
+                        <div class="options" id="advancedoptions">
+                            
+                            <br/>
+                            
                             <div>
                                 <div style="float:left;width:50%">Should collaborators enter a procedure?</div>
                                     <div><select name="req_procedure" id="req_procedure">
                                         <option value="1">Yes</option>
-                                        <option value="0">No</option>
+                                        <option value="0" selected>No</option>
                                     </select><br /><br /></div>
                             </div>
 
@@ -84,27 +95,28 @@
                                 <div style="float:left;width:50%">Should collaborators enter session names?</div>
                                     <div><select class="sel" name="req_name" id="req_name">
                                         <option value="1">Yes</option>
-                                        <option value="0">No</option>
+                                        <option value="0" selected>No</option>
                                     </select><br /><br /></div>
-                                    
-                                <div id="name_pref">&nbsp;&nbsp;<b>Enter name prefix:</b></div>
-                                    <input type="text" name="name_prefix" id="name_input" style="position:absolute;left:31%;width:27%"/><br />
+                                <div id="name_div">
+                                    <div style="float:left;" id="name_pref">&nbsp;&nbsp;<b>Enter name prefix:</b></div>
+                                    <input type="text" name="name_prefix" id="name_input" value="Session " style="position:absolute;left:21%;width:27%"/><br />
                                     <br />
-                                    <span style="float:none;left:5%" id="name_hint" class="hint">e.g., Session #: 1 (numbers will be appended automatically)</span><br />                          
+                                    <span style="float:none;left:5%" id="name_hint" class="hint">e.g., Session #: 1 (numbers will be appended automatically)</span><br />
+                                </div>                          
                            </div>
 
                            <div>
                                 <div style="float:left;width:50%">Should collaborators enter a location?</div>
                                     <div><select name="req_location" id="req_location">
                                         <option value="1">Yes</option>
-                                        <option value="0">No</option>
+                                        <option value="0" selected>No</option>
                                     </select><br /><br /></div>
-                                    
-                                <div id="loc_label">&nbsp;&nbsp;<b>Enter location:</b></div>
-                                    <input type="text" name="location" id="loc_input" style="position:absolute;left:31%;width:27%" /><br />
+                                <div id="loc_div">
+                                    <div style="float:left;" id="loc_label">&nbsp;&nbsp;<b>Enter location:</b></div>
+                                    <input type="text" name="location" id="loc_input" value=" " style="position:absolute;left:21%;width:27%" /><br />
                                     <br />
                                     <span style="float:none;left:5%" id="loc_hint" class="hint">i.e., All sessions will have the same location</span><br />
-
+                                </div>
                            </div>
                            <div>
                                 <div style="float:left;width:50%">Is there a recommended sample interval?</div>
@@ -124,7 +136,7 @@
 				
 				<fieldset id="fields">
 				    
-		    		<legend>Step 3: Data Fields</legend>
+		    		<legend>Step 2: Data Fields</legend>
 					    <div id="setup_button">
 		    			    <p style="padding:6px 0px;">Click the 'Setup Data Fields' button to start the process of setting up your data fields.</p>
 						    <a href="#TB_inline?height=400&width=600&inlineId=hiddenModalContent" class="thickbox" style="text-decoration:none;"><button type="button">Setup Data Fields</button></a>
@@ -144,7 +156,7 @@
 		  		</fieldset>
 
 				<fieldset>
-			    	<legend>Step 4: Review and Finish</legend>
+			    	<legend>Step 3: Review and Finish</legend>
 			    	    <p style="padding:6px 0px;">When you are finished reviewing your experiment, click the Create Experiment button to continue.</p>
 					    <button id="experiment_create" name="experiment_create" type="submit">Create Experiment</button>
 				</fieldset>

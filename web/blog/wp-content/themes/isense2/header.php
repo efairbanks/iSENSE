@@ -13,7 +13,7 @@
         <script type="text/javascript" src="/html/js/lib/rating.js"></script>
         <script type="text/javascript" src="/html/js/isense.js"></script>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-		<link rel="shortcut icon" href="img/favicon.png" />
+		<link rel="shortcut icon" href="/html/img/favicon.png" />
 	</head>
 	<body>
 		<div id="container">

@@ -42,7 +42,7 @@
         <script src="/html/js/lib/MillisecondClock.js" type="text/javascript"></script>
 		
 		<link rel="stylesheet" type="text/css" href="/loader.php/css" />
-		<link rel="shortcut icon" href="/img/favicon.png" />
+		<link rel="shortcut icon" href="/html/img/favicon.png" />
 		
 		{ $head }
 	</head>
